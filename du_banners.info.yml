@@ -1,0 +1,8 @@
+name: 'DU Banners'
+type: module
+description: 'ADD DESCRIPTION'
+core_version_requirement: ^10
+package: 'University of Denver'
+dependencies:
+  - cms_content_sync
+
