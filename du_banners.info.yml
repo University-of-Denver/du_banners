@@ -3,6 +3,6 @@ type: module
 description: 'ADD DESCRIPTION'
 core_version_requirement: ^10
 package: 'University of Denver'
+version: 10.18.0
 dependencies:
   - cms_content_sync
-
