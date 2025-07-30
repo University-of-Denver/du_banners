@@ -3,3 +3,18 @@
  * PHP functions for MODULE
  */
 
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function du_banners_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+
+  if ($node instanceof NodeInterface && $node->bundle() === 'course') {
+    $suggestions[] = 'node__course__du_banners';
+    if ($variables['view_mode'] === 'teaser') {
+      $suggestions[] = 'node__course__teaser__du_banners';
+    }
+  }
+}
