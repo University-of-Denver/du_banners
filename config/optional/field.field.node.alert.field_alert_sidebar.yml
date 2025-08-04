@@ -1,0 +1,33 @@
+uuid: 679cd714-f744-420a-b1ca-e6ddab8057d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_sidebar
+    - node.type.alert
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    embed_code: '0'
+    inline_formatting: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: udqMhgg18RKraBoB-Il5XC44MIQoJxSP6HaLZ693-so
+id: node.alert.field_alert_sidebar
+field_name: field_alert_sidebar
+entity_type: node
+bundle: alert
+label: 'Alert Sidebar'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<h3>Important Numbers</h3>\r\n\r\n<h4>Text Text&nbsp;</h4>\r\n\r\n<p>777-777-7777</p>\r\n"
+    format: rich_text
+default_value_callback: ''
+settings: {  }
+field_type: text_long

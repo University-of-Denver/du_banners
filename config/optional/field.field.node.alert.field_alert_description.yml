@@ -1,0 +1,30 @@
+uuid: f4a3d1e4-73d0-41fd-a0ce-15a7342d6a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_description
+    - node.type.alert
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    embed_code: '0'
+    inline_formatting: '0'
+    plain_text: '0'
+_core:
+  default_config_hash: Wt-sglDTQ7rvJTv9fwZUdrc0V2FQcNBvLnLc1tg5QsQ
+id: node.alert.field_alert_description
+field_name: field_alert_description
+entity_type: node
+bundle: alert
+label: 'Alert Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 0069ce3a-f763-466d-9d76-b4c1b7cc551e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_first_word
+    - node.type.alert
+id: node.alert.field_alert_first_word
+field_name: field_alert_first_word
+entity_type: node
+bundle: alert
+label: 'Alert first word'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
