@@ -1,0 +1,29 @@
+uuid: e9eec55c-a81e-491b-a4b0-d96e4fd9105b
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.alerts
+  module:
+    - system
+    - views
+  theme:
+    - pl_drupal
+id: views_block__alerts_block_1
+theme: pl_drupal
+region: content_top
+weight: -61
+provider: null
+plugin: 'views_block:alerts-block_1'
+settings:
+  id: 'views_block:alerts-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/*"

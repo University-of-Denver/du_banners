@@ -1,0 +1,23 @@
+uuid: 12d9ce2e-904b-478f-982c-d3c4aebfcf7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_date_time
+    - node.type.alert
+  module:
+    - datetime
+_core:
+  default_config_hash: S3cmnbV0Vcgilz9s-rC0gqL3NE8CpdwWqEpMcfb3V6M
+id: node.alert.field_alert_date_time
+field_name: field_alert_date_time
+entity_type: node
+bundle: alert
+label: 'Alert Date/Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
