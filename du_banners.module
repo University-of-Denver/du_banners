@@ -3,18 +3,30 @@
  * PHP functions for MODULE
  */
 
-use Drupal\node\NodeInterface;
+function du_banners_theme($existing, $type, $theme, $path) {
+  return [
+    'alert' => [
+      'variables' => ['content' => NULL],
+      'template' => 'alert',
+      'path' => $path . '/templates/misc',
+    ],
+    'alert_urgent_page' => [
+      'variables' => ['content' => NULL],
+      'template' => 'alert-urgent-page',
+      'path' => $path . '/templates/misc',
+    ],
+    'node__alert' => [
+      'render element' => 'elements',
+      'base hook' => 'node',
+      'template' => 'node--alert',
+      'path' => $path . '/templates/node',
+    ],
+  ];
+}
 
-/**
- * Implements hook_theme_suggestions_node_alter().
- */
 function du_banners_theme_suggestions_node_alter(array &$suggestions, array $variables) {
   $node = $variables['elements']['#node'];
-
-  if ($node instanceof NodeInterface && $node->bundle() === 'course') {
-    $suggestions[] = 'node__course__du_banners';
-    if ($variables['view_mode'] === 'teaser') {
-      $suggestions[] = 'node__course__teaser__du_banners';
-    }
+  if ($node instanceof \Drupal\node\NodeInterface && $node->bundle() === 'alert') {
+    $suggestions[] = 'node__alert';
   }
 }
