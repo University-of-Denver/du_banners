@@ -1,0 +1,8 @@
+alerts:
+  version: 10.18.0
+  css:
+    theme:
+      css/alerts.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
