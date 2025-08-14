@@ -1,6 +1,5 @@
 {{ attach_library('du_banners/alerts') }}
 
-
 {% set alert =  {
 
     "level":content.field_alert_type|field_raw('value'),
@@ -16,4 +15,5 @@
     "alert_link": content.field_alert_link|field_value
 
 } %}
-{% include  "@du_bootstrap/misc/alert.twig" %}
+{% include "@du_banners/misc/alert.twig" %}
+
