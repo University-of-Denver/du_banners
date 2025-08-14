@@ -1,0 +1,41 @@
+uuid: 0be4f727-019c-4757-ac17-56367187cd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alert.field_alert_color
+    - field.field.node.alert.field_alert_date_time
+    - field.field.node.alert.field_alert_description
+    - field.field.node.alert.field_alert_first_word
+    - field.field.node.alert.field_alert_link
+    - field.field.node.alert.field_alert_sidebar
+    - field.field.node.alert.field_alert_type
+    - node.type.alert
+  module:
+    - user
+_core:
+  default_config_hash: UZA4YYEtQqIl8Bmm3ECRl1WfpNmCGA1Shdn-DeN7YiY
+id: node.alert.teaser
+targetEntityType: node
+bundle: alert
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alert_color: true
+  field_alert_date_time: true
+  field_alert_description: true
+  field_alert_first_word: true
+  field_alert_link: true
+  field_alert_sidebar: true
+  field_alert_type: true
