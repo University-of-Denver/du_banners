@@ -27,6 +27,8 @@ jobs:
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
+        with:
+          autostart: false
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -42,6 +44,10 @@ jobs:
           # Testing with a specific ref from PR.
           ref: 'w1775318155'
           # ref: ${{ github.event.inputs.upstream_ref || '' }}
+
+      - name: Start DDEV in upstream directory
+        working-directory: upstream
+        run: ddev start
 
       - name: Bootstrap upstream with module and tests
         run: bash scripts/bootstrap-ci.sh
