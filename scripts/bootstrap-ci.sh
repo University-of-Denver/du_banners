@@ -1,4 +1,7 @@
-DEST_MODULE_DIR="$UPSTREAM_DRUPAL_ROOT/modules/custom/du_banners"
+#!/usr/bin/env bash
+set -euxo pipefail
+
+DEST_MODULE_DIR="$GITHUB_WORKSPACE/upstream/web/modules/custom/du_banners"
 
 # Copy entire module into upstream/web/modules/custom/du_banners
 mkdir -p "$DEST_MODULE_DIR"
