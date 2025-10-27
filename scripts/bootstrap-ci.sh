@@ -5,7 +5,7 @@ DEST_MODULE_DIR="$GITHUB_WORKSPACE/upstream/web/modules/custom/du_banners"
 
 # Copy entire module into upstream/web/modules/custom/du_banners
 mkdir -p "$DEST_MODULE_DIR"
-cp -r "$GITHUB_WORKSPACE/"* "$DEST_MODULE_DIR/"
+cp -r "$GITHUB_WORKSPACE/module/"* "$DEST_MODULE_DIR/"
 
 # Install PHP dependencies
 cd "$GITHUB_WORKSPACE/upstream"

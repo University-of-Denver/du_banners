@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout module
         uses: actions/checkout@v4
+        with:
+          path: module
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
