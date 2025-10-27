@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { getRole, logInViaForm, logOutViaUi } from "@support/users";
 
-test.describe('@alerts - Login and out Tests', () => {
+test.describe('@banners - Login and out Tests', () => {
   const site_admin = getRole('site_admin');
 
   test.only('AL1 - Create a new Alert node', async ({page, context}) => {

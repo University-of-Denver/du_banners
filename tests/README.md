@@ -11,9 +11,6 @@ and docs specifically for writing tests within this repository.
 General testing documentation:
 - [Testing Introduction & Background](https://ducloudwiki.atlassian.net/wiki/spaces/DS/pages/1168900125/Testing+-+Introduction+Background)
 
-Project-specific testing documentation:
-- [Writing Tests](docs/writing-tests.md)
-
 ## Testing Setup
 
 The `./scripts/bootstrap-local.sh` script will setup the environment for running the tests, but 
@@ -36,30 +33,18 @@ a different environment, like on Pantheon.
 
 ```bash
 # Run tests against a local environment.
-npm run test
+npx playwright test
+
+# Run tests for specific tags.
+npx playwright test --tag @smoke,@banners
 
 # Run tests against a Pantheon environment.
-PLAYWRIGHT_BASE_URL="https://test-site.pantheonsite.io/" npm run test 
+PLAYWRIGHT_BASE_URL="https://test-site.pantheonsite.io/" npx playwright test  
 ```
 
 ## Structure
 
-The tests' directoy is structured into separate subdirectories for various purposes.
-
-### Assets
-
-You will need to upload images and other assets to the Drupal site where users interact with 
-file inputs. Place any assets used in the tests in the appropriate subdirectory.
-
-- `assets` - Generic assets to be used by the tests.
-  - `images` - Any images used by the tests.
-
-### Data
-
-The tests will use shared data for things like users and content. Try not to hardcode any data 
-within the tests and consider if it can be parameterized and shared.
-
-- `test-roles.ts` - User data shared across tests.
+The tests' directory is structured into separate subdirectories for various purposes.
 
 ### Docs
 
@@ -71,25 +56,6 @@ maintaining the test suite.
 
 Playwright tests are stored in this directory and broken down into test cases and test plans.
 
-### scripts
+### fixtures
 
-Any scripts used to create files, like the test data, should be stored here.
-
-- `generate-role-data.ts` - Generates the `data/test-roles.ts` file via user role information 
-  from drush.
-
-### support
-
-Any support files used by the tests should be stored here.
-
-- `files.ts` - Support for working with files.
-- `users.ts` - Use this for working with users in tests including login/logout methods.
-
-## Todos
-
-These would be good things to add to the tests:
-
-- [ ] Implement cookie-based login https://medium.com/automated-monotony/using-playwright-cookies-to-bypass-authentication-b5eb29b35c73
-- [ ] Possibly move bootstrap scripts to DDEV commands
-- [ ] Add the ability to run drush commands via the support helper files
-- [ ] Stop CI run on first test failure
+Anything related to setting up fixtures for the tests should be stored here.
