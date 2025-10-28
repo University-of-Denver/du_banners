@@ -56,10 +56,9 @@ jobs:
           pwd
           ls -al .
           ls -al upstream/web/modules/custom
-          exit 1
 
       - name: Bootstrap upstream with module and tests
-        working-directory: 'upstream/web/modules/custom/du_banners'
+        working-directory: module
         run: bash scripts/bootstrap-ci.sh
 
       - name: Install Playwright browsers (CI)
