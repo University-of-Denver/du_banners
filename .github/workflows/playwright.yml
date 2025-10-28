@@ -27,16 +27,6 @@ jobs:
         with:
           path: module
 
-      - name: Setup DDEV
-        uses: ddev/github-action-setup-ddev@v1
-        with:
-          autostart: false
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       - name: Checkout Drupal upstream
         uses: actions/checkout@v4
         with:
@@ -47,9 +37,15 @@ jobs:
           ref: 'w1775318155'
           # ref: ${{ github.event.inputs.upstream_ref || '' }}
 
-      - name: Start DDEV in upstream directory
-        working-directory: upstream
-        run: ddev start
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          ddevDir: upstream
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Bootstrap upstream with module and tests
         working-directory: module
