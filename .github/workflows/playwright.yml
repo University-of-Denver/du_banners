@@ -52,10 +52,11 @@ jobs:
         run: ddev start
 
       - name: Bootstrap upstream with module and tests
+        working-directory: 'upstream/web/modules/custom/du_banners'
         run: bash scripts/bootstrap-ci.sh
 
       - name: Install Playwright browsers (CI)
-        working-directory: upstream/tests
+        working-directory: upstream
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests for banners
