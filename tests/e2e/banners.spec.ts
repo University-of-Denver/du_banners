@@ -4,7 +4,7 @@ import { getRole, logInViaForm, logOutViaUi } from "@support/users";
 test.describe('@banners - Login and out Tests', () => {
   const site_admin = getRole('site_admin');
 
-  test.only('AL1 - Create a new Alert node', async ({page, context}) => {
+  test('AL1 - Create a new Alert node', async ({page, context}) => {
     // 1. Authenticate as qa_site_admin.
     await logInViaForm(page, context, site_admin);
 
