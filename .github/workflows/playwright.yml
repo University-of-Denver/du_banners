@@ -51,6 +51,13 @@ jobs:
         working-directory: upstream
         run: ddev start
 
+      - name: Debug listings
+        run: |
+          pwd
+          ls -al .
+          ls -al upstream/web/modules/custom
+          exit 1
+
       - name: Bootstrap upstream with module and tests
         working-directory: 'upstream/web/modules/custom/du_banners'
         run: bash scripts/bootstrap-ci.sh
