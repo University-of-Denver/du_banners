@@ -51,11 +51,11 @@ jobs:
         working-directory: upstream
         run: ddev start
 
-      - name: Debug listings
-        run: |
-          pwd
-          ls -al .
-          ls -al upstream/web/modules/custom
+#      - name: Debug listings
+#        run: |
+#          pwd
+#          ls -al .
+#          ls -al upstream/web/modules/custom
 
       - name: Bootstrap upstream with module and tests
         working-directory: module
