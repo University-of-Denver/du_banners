@@ -17,7 +17,7 @@ You will need to have a local copy of the DU profile set up and running first.
 
 Once you have the profile running, you can install this module locally:
 
-1. `cd` into the `web/modules/custom` directory
+1. `cd` into the `web/modules/packages` directory
 2. `git clone git@github.com:DU-University-Relations/du_banners.git`
 3. `cd du_banners`
 4. `./scripts/bootstrap-local.sh`
