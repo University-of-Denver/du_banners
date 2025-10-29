@@ -6,9 +6,9 @@
     "University of Denver",
     "drupal"
   ],
-  "homepage": "http://www.du.edu",
-  "license": "GPL-2.0+",
-  "type": "drupal-module",
+  "homepage": "https://www.du.edu",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-custom-module-package",
   "extra": {
     "_README": "DU Banner package"
   }
