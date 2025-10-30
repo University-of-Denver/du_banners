@@ -32,7 +32,7 @@ jobs:
         with:
           repository: DU-University-Relations/d9-composer-managed
           path: upstream
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.D9_PROFILE_PAT }}
           # Testing with a specific ref from PR.
           ref: 'w1787242007'
           # ref: ${{ github.event.inputs.upstream_ref || '' }}
