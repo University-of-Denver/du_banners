@@ -1,4 +1,4 @@
-name: e2e
+name: e2e for D10 DU Core Profile
 
 on:
   pull_request:
