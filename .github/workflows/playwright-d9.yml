@@ -19,7 +19,7 @@ jobs:
   playwright:
     runs-on: ubuntu-22.04
     env:
-      PLAYWRIGHT_BASE_URL: https://drupal-composer-managed.ddev.site
+      PLAYWRIGHT_BASE_URL: https://d9-composer-managed.ddev.site
 
     steps:
       - name: Checkout module
