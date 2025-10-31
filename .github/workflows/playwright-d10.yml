@@ -33,9 +33,7 @@ jobs:
           repository: DU-University-Relations/drupal-composer-managed
           path: upstream
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Testing with a specific ref from PR.
-          ref: 'w1775318155'
-          # ref: ${{ github.event.inputs.upstream_ref || '' }}
+          ref: ${{ github.event.inputs.upstream_ref || '' }}
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
