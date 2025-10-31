@@ -32,7 +32,8 @@ Quick start:
 - [Install Testing on a Package](https://ducloudwiki.atlassian.net/wiki/x/F4DDRQ) has 
   instructions on how to install the testing infrastructure on a package.
 
-See scripts/README.md for detailed instructions on local setup, CI, and the test structure.
+See [the testing README document](tests/playwright/README.md) for more information on writing 
+and running tests.
 
 ## Dependencies
 

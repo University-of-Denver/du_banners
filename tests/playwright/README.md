@@ -1,6 +1,6 @@
 # DU Core Profile Tests
 
-These are the tests for the DU Core Profile written using Drupal 10.
+These are the tests for the DU Banners package.
 
 ## Testing Docs
 
@@ -14,32 +14,27 @@ General testing documentation:
 ## Testing Setup
 
 The `./scripts/bootstrap-local.sh` script will setup the environment for running the tests, but 
-you can look at the commands in the script and run them manually if you need to.
-
-```bash
-# Install testing dependencies.
-npm install
-ddev drush en du_functional_testing -y
-
-# Generate test user data.
-npm run generate-roles
-```
+the config import does not work right now so the only test is a "dummy test" that will pass and 
+prove you can run the banner tests tagged with `@banners`.
 
 ## Running Tests
 
-The tests are set to run using a `baseURL` in the Playwright config file, but you can also pass 
-in the base URL as an argument to the `npm run test` command in order to run the tests against 
-a different environment, like on Pantheon.
+The tests are set to run using a core profile's Playwright configuration.
 
 ```bash
-# Run tests against a local environment.
-npx playwright test
+# Go to the Drupal profile root where the playwright.config.js file is located.
+cd /path/to/project/root
+# Output the playwright.config.js file to make sure you are in the right directory.
+cat playwright.config.js
 
-# Run tests for specific tags.
-npx playwright test --tag @smoke,@banners
+# Run tests targeting the banners package.
+npx playwright test --grep @banners
+
+# Run all tests.
+npx playwright test 
 
 # Run tests against a Pantheon environment.
-PLAYWRIGHT_BASE_URL="https://test-site.pantheonsite.io/" npx playwright test  
+PLAYWRIGHT_BASE_URL="https://test-site.pantheonsite.io/" npx playwright test --grep @banners 
 ```
 
 ## Structure
