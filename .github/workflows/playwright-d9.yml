@@ -27,7 +27,7 @@ jobs:
         with:
           path: module
 
-      - name: Checkout Drupal upstream
+      - name: Checkout the Drupal upstream
         uses: actions/checkout@v4
         with:
           repository: DU-University-Relations/d9-composer-managed
