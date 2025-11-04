@@ -33,9 +33,7 @@ jobs:
           repository: DU-University-Relations/d9-composer-managed
           path: upstream
           token: ${{ secrets.D9_PROFILE_PAT }}
-          # Testing with a specific ref from PR.
-          ref: 'w1787242007'
-          # ref: ${{ github.event.inputs.upstream_ref || '' }}
+          ref: ${{ github.event.inputs.upstream_ref || '' }}
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
