@@ -1,12 +1,15 @@
 {
-  "name":             "university-of-denver/du_banners",
-  "version":          "10.18.0",
-  "description":      "Package of Event Related Features",
-  "keywords":         ["University of Denver", "drupal"],
-  "homepage":         "http://www.du.edu",
-  "license":          "GPL-2.0+",
-  "type":             "drupal-module",
+  "name": "university-of-denver/du_banners",
+  "version": "10.18.0",
+  "description": "Package of Banner-related features",
+  "keywords": [
+    "University of Denver",
+    "drupal"
+  ],
+  "homepage": "https://www.du.edu",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-custom-module-package",
   "extra": {
-      "_README": "DU Banner package"
+    "_README": "DU Banner package"
   }
 }
