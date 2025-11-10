@@ -10,57 +10,15 @@ on:
         required: false
         default: ''
 
-# Avoid overlapping runs per branch
 concurrency:
-  group: e2e-${{ github.ref }}
+  group: e2e-d10-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   playwright:
-    runs-on: ubuntu-22.04
-    env:
-      PLAYWRIGHT_BASE_URL: https://drupal-composer-managed.ddev.site
-
-    steps:
-      - name: Checkout module
-        uses: actions/checkout@v4
-        with:
-          path: module
-
-      - name: Checkout Drupal upstream
-        uses: actions/checkout@v4
-        with:
-          repository: DU-University-Relations/drupal-composer-managed
-          path: upstream
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ref: ${{ github.event.inputs.upstream_ref || '' }}
-
-      - name: Setup DDEV
-        uses: ddev/github-action-setup-ddev@v1
-        with:
-          ddevDir: upstream
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: Bootstrap upstream with module and tests
-        working-directory: module
-        run: bash scripts/bootstrap-ci.sh
-
-      - name: Install Playwright browsers (CI)
-        working-directory: upstream
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright tests for banners
-        working-directory: upstream
-        run: npx playwright test --grep @banners
-
-      - name: Upload Playwright report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: upstream/tests/playwright-report
-          if-no-files-found: ignore
+    uses: DU-University-Relations/.github/.github/workflows/playwright-d10-reusable.yml@main
+    with:
+      enabled_modules: "du_banners"
+      test_tags: "@banners"
+      profile_ref: ${{ github.event.inputs.upstream_ref || '' }}
+    secrets: inherit
