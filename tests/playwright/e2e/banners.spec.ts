@@ -5,7 +5,7 @@ test.describe('@banners - Login and out Tests', () => {
   const administrator = getRole('administrator');
 
   // @source https://ducloudwiki.atlassian.net/wiki/spaces/DS/pages/1115062392/UAT+-+Alerts+local
-  test.skip('AL1 - Create a new Alert node', async ({page, context}) => {
+  test('AL1 - Create a new Alert node', async ({page, context}) => {
     // 1. Authenticate as qa_site_admin.
     await logInViaForm(page, context, administrator);
 
