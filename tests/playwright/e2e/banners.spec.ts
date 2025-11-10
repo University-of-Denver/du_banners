@@ -15,6 +15,7 @@ test.describe('@banners - Login and out Tests', () => {
 
     // await page.locator('[data-drupal-link-system-path="admin/content"]').click();
     // await page.locator('[data-drupal-link-system-path="node/add"]').click();
+
     // await page.getByRole('link', { name: 'Alert' }).click();
 
     // Select Informational for Alert Type, which is called "notification" in the select list.
