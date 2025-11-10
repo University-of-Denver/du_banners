@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   playwright:
-    uses: DU-University-Relations/.github/.github/workflows/playwright-d9-reusable.yml@w1798704830
+    uses: DU-University-Relations/.github/.github/workflows/playwright-d9-reusable.yml@main
     with:
       enabled_modules: "du_banners"
       test_tags: "@banners"
