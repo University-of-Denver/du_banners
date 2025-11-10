@@ -21,3 +21,4 @@ jobs:
       enabled_modules: "du_banners du_functional_testing"
       test_tags: "@banners"
       profile_ref: ${{ github.event.inputs.upstream_ref || '' }}
+    secrets: inherit
