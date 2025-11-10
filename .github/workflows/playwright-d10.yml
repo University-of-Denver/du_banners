@@ -18,7 +18,7 @@ jobs:
   playwright:
     uses: DU-University-Relations/.github/.github/workflows/playwright-d10-reusable.yml@w1798704830
     with:
-      enabled_modules: "du_banners du_functional_testing"
+      enabled_modules: "du_banners"
       test_tags: "@banners"
       profile_ref: ${{ github.event.inputs.upstream_ref || '' }}
     secrets: inherit

@@ -13,9 +13,12 @@ General testing documentation:
 
 ## Testing Setup
 
-The `./scripts/bootstrap-local.sh` script will setup the environment for running the tests, but 
-the config import does not work right now so the only test is a "dummy test" that will pass and 
-prove you can run the banner tests tagged with `@banners`.
+You will need to have a local development environment set up with a DU Core profile. Then, you 
+will need to enable the DU Banners package and the DU Functional Testing module to run the tests.
+
+```bash
+ddev drush en du_banners du_functional_testing -y
+```
 
 ## Running Tests
 
@@ -24,6 +27,7 @@ The tests are set to run using a core profile's Playwright configuration.
 ```bash
 # Go to the Drupal profile root where the playwright.config.js file is located.
 cd /path/to/project/root
+
 # Output the playwright.config.js file to make sure you are in the right directory.
 cat playwright.config.js
 
