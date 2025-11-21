@@ -8,7 +8,7 @@ test.describe('@banners - Login and out Tests', () => {
   test.only('AL1 - Create a new Alert node', async ({page, context}) => {
     // 1. Authenticate as qa_site_admin.
     await page.goto('/does/not/exist');
-    await logInViaForm(page, context, administrator);
+    // await logInViaForm(page, context, administrator);
 
     // 2. Navigate to the "add Alert" form using the Admin toolbar.
     //    Content > Add content > Alert
